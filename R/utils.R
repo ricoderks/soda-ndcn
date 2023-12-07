@@ -526,9 +526,10 @@ get_group_median_table = function(data_table,
     } else {
       group_values = apply(group_table,2,median, na.rm = TRUE)
     }
-
+    
     # group_values[is.na(group_values)] = 0.0
     group_values[group_values == 0] = NA
+
     out_table[group,] = group_values
   }
   return(out_table)
@@ -608,7 +609,6 @@ impute_na = function(method, data_table, meta_table, group_col, sample_rownames,
   }
   return(data_table)
 }
-
 
 get_lipid_classes = function(feature_list, uniques = TRUE){
   classes = sapply(feature_list, function(x)
@@ -822,7 +822,7 @@ pca_plot_loadings = function(x, y, feature_list, width, height, colour_list){
     vline(0)
   )
 
-
+  
   for (i in 1:length(feature_list)) {
     feature = feature_list[i]
     new_line = list(
