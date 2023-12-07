@@ -1,48 +1,19 @@
 Package: soda
 Title: Simple Omics Data Analysis
-Version: 0.1.9001
-Authors@R: c(
-    person("Yassene", "Mohammed", , "y.mohammed@lumc.nl", role = "aut",
+Version: 0.8.55
+Authors@R:
+  c(person(given = "Yassene",
+           family = "Mohammed", 
+           email = "y.mohammed@lumc.nl",
+           role = c("cre", "aut"),
            comment = c(ORCID = "0000-0003-3265-3332")),
-    person("Rico", "Derks", , "r.j.e.derks@lumc.nl", role = c("cre", "aut"),
+    person(given = "Rico",
+           family = "Derks",
+           email = "r.j.e.derks@lumc.nl",
+           role = "aut",
            comment = c(ORCID = "0000-0002-8920-7133")),
-    person("Damien", "Olivier", , "d.olivier@lumc.nl", role = "aut",
-           comment = c(ORCID = "0000-0002-6363-0857"))
-  )
-Description: Shiny app for multi omics data visualization and analysis.
-License: MIT + file LICENSE
-URL: https://github.com/ndcn/soda
-BugReports: https://github.com/ndcn/soda-ndcn/issues
-Imports: 
-    bs4Dash,
-    ComplexHeatmap,
-    config (>= 0.3.1),
-    datamods,
-    ggplot2,
-    glmnet,
-    golem (>= 0.3.2),
-    grDevices,
-    grid,
-    InteractiveComplexHeatmap,
-    pcaMethods,
-    plotly,
-    RColorBrewer,
-    reactable,
-    reshape,
-    shiny (>= 1.7.1),
-    shinyjqui,
-    shinyWidgets,
-    stats,
-    stringr,
-    tidyr,
-    utils
-Remotes:
-    bioc::ComplexHeatmap,
-    bioc::InteractiveComplexHeatmap,
-    bioc::pcaMethods
-Suggests: 
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.2.2
+    person(given = "Damien",
+           family = "Olivier-Jimenez",
+           email = "d.olivier@lumc.nl",
+           role = c("cre", "aut"),
+           comment = c(ORCID = "0000-0002-6363-0857")))
