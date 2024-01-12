@@ -731,11 +731,11 @@ lips_get_del_cols = function(data_table,
                              blank_multiplier,
                              sample_threshold,
                              group_threshold) {
-
   # Blank filtering
   del_cols = c()
-  all_batches = unique(imp_meta[, batch_col])
+  all_batches = unique(raw_meta[, batch_col])
   for (b in all_batches) {
+    print(b)
     batch_idx = which(imp_meta[, batch_col] == b)
     batch_blanks = base::intersect(batch_idx, idx_blanks)
     batch_samples = base::intersect(batch_idx, idx_samples)
@@ -744,7 +744,6 @@ lips_get_del_cols = function(data_table,
     batch_blanks = imp_meta[batch_blanks, id_col_meta]
     batch_samples = imp_meta[batch_samples, id_col_meta]
     batch_samples = base::intersect(rownames(data_table), batch_samples)
-
     del_cols = c(del_cols, blank_filter(data_table = data_table[batch_samples,],
                                         blank_table = blank_table[as.character(batch_blanks),],
                                         blank_multiplier = blank_multiplier,

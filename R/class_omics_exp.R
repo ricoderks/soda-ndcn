@@ -741,7 +741,6 @@ Omics_exp = R6::R6Class(
                             norm_col = "") {
 
       if (!is.na(self$indices$id_col_data) & !is.null(self$tables$imp_data) & !is.null(self$tables$raw_meta)){
-
         # Copy imported table
         data_table = self$tables$imp_data
 
